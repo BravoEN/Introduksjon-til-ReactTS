@@ -1,0 +1,50 @@
+body {
+    background-color: rgb(191, 235, 255);
+    font-family: "Reddit Mono", monospace;
+    font: weight 400px;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+.oppgaveFordeling {
+    display:flex;
+    flex-direction: column;
+    align-content: space-around;
+
+}
+
+.intro {
+    background-color: rgb(241, 250, 255);
+    color:black;
+    padding:4%;
+    margin-top:1.5%;
+    border-radius: 8px;
+}
+
+.intro h1 {
+    text-decoration: underline;
+}
+
+.oppgave {
+    background-color: rgb(241, 250, 255);
+    color:black;
+    padding:4%;
+    margin-top:1.5%;
+    border-radius: 8px;
+}
+
+.oppgave h2 {
+    text-decoration: underline;
+}
+
+.oppgave a {
+    font-family: "Reddit Mono", monospace;
+    font: weight 600px;
+    font-optical-sizing: auto;
+    font-style: normal;
+    color:black;
+    text-decoration: none;
+}
+.oppgave a:hover {
+    color:#3bace0;
+}

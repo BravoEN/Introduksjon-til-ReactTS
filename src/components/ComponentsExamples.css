@@ -1,0 +1,55 @@
+/*
+Alle Components
+*/
+
+.exampleComponent {
+    display:flex;
+    flex-direction: column;
+    -ms-flex-align:center;
+    color:#007acc;
+    padding:2%;
+}
+
+.button {
+    align-self: flex-end;
+    margin:2%;
+}
+
+/*
+Buttons Example
+*/
+
+.light {
+    background-color: rgb(241, 250, 255);
+    padding:2%;
+    border: 1px solid #007acc;
+    border-radius: 4px;
+
+}
+
+.dark {
+    background-color:  rgb(32, 44, 51);
+    padding:2%;
+    border: 1px solid #007acc;
+    border-radius: 4px;
+}
+
+/*
+Forms Example
+*/
+
+.formFields {
+    padding:2%;
+    border: 1px solid #007acc;
+    border-radius: 4px;
+}
+
+.formColumn {
+    display:flex;
+    flex-direction: row;
+    padding-bottom: 2%;
+}
+
+/*
+List Example
+*/
