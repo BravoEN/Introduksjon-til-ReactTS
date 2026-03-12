@@ -11,7 +11,7 @@ export default function Oppg1(){
     const {data, refetch, error} = useQuery({
         queryKey:["cats"],
         queryFn:() => getCatFact(), //bruker arrow function for å sende parameteret
-        staleTime: Infinity,
+        staleTime: Infinity, // for den ikke skal hente ny data før vi ber den om det, og ikke automatisk etter en viss tid.
     })
 
     const [faktaCounter, setFaktaCounter] = useState<number>(1)
