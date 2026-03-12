@@ -5,51 +5,14 @@ import "./ComponentsExamples.css"
 
 export default function ListExample() {
 
-    class GroceriesList {
-        private list:Array<Grocery>;
-
-        public constructor() {
-            this.list=[]
-        }
-
-        public addGrocery(name:string, amount:number) {
-            const newGrocery=new Grocery(name,amount);
-            this.list.push(newGrocery);
-        }
-        public getList():Array<Grocery> {
-            return this.list;
-        }
-    }
-
-    class Grocery {
-        private name:string;
-        private amount:number;
-
-        public constructor(name:string, amount:number) {
-            this.name=name;
-            this.amount=amount;
-        }
-        public getName():string {
-            return this.name;
-        }
-        public getAmount():number {
-            return this.amount;
-        }
-    }
-
-    useEffect(() => {
     
-        /*HER!!!!!!!!*/
 
-    })
-
-    const foodToGet=new GroceriesList();
+    const [groceryList, setGroceryList] = useState<string[]>([]);
 
     function addFoodToGet(formData:any) {
-        const newFoodName=formData.get("name");
-        const newFoodAmount=formData.get("amount");
+        const newFoodName=formData.get("name")
 
-        foodToGet.addGrocery(newFoodName, newFoodAmount);
+        setGroceryList([...groceryList,newFoodName])
 
     }
 
@@ -63,15 +26,12 @@ export default function ListExample() {
                         <input
                         name="name"/>
                     </div>
-                    <div className="formColumn">
-                        <label>Antall: </label>
-                        <input
-                        name="amount"/>
-                    </div>
                 </div>
                 <button type="submit" className="button">Legg til</button>
             </form>
             <div className="exampleComponent">
+                <h4>Handleliste</h4>
+                {groceryList.map(grocery => (<li>{grocery}</li>))}
             </div>
         </div>
     )

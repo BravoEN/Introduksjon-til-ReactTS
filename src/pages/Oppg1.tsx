@@ -21,22 +21,19 @@ export default function Oppg1(){
         er hvor api kallet går.
     */
 
-    const [totalCatFacts, setTotalCatFacts]=useState<number>(0)
-    const [goingBack, setGoingBack]=useState<boolean>(false)
-    const [factOn, setFactOn]=useState<number>(0)
-
     const numberOfFacts:number=1
 
     const {data, refetch, error} = useQuery({
         queryKey:["cats", numberOfFacts],
         queryFn:() => getCatFact(numberOfFacts) //Bruker arrow function for å sende parameteret
     })
-    /*
-    const {catPictureData, error} = useQuery({
-        queryKey:["cats"],
-        queryFn: getCatPicture
-    })*/
 
+    const [count, setCount] = useState<number>(1);
+
+    const fetchNyFakta = () => {
+        refetch()
+        setCount(count+1)
+    };
 
 
     if (error) {
@@ -45,19 +42,17 @@ export default function Oppg1(){
     
 
     return (
-        <div className="oppgaveFordeling">
+        <div>
             <div>
                 <h3>OMG JEG ELSKER KATTER!!!</h3>
+                <div>
+                    Antall fakta hentet: {count}
+                </div>
                 <div>
                     <h4>Kattefakta:</h4>
                     <p>{ data?.data?.[0]}</p>
                     <div>
-                        <button>Tilbake</button>
-                        {!goingBack? 
-                            <button onClick={() => refetch()}>Ny fakta!</button>:
-                            <button>Neste</button>
-                        }
-                        
+                            <button onClick={fetchNyFakta}>Ny fakta!</button>
                     </div>
                 </div>
             </div>
@@ -69,10 +64,3 @@ const getCatFact = async (numberOfFacts:number) => {
     const response = await axios.get(`https://meowfacts.herokuapp.com/?count=${numberOfFacts}`)
     return await response.data
 }
-
-/*
-const getCatPicture = async () => {
-    const response = await axios.get(`https://cataas.com/cat`)
-    return await response.data
-}
-    */
