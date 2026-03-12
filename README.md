@@ -9,13 +9,10 @@ Nedenfor er en beskrivelse av de to oppgavene som vi har brukt.
 Lag en nettside som passer en skikkelig katteentusiast. Denne nettsiden skal inneholde to hovedkomponenter:
 
 Komponent A: Daglige fakta om katter
-- Hent en daglig kattefakta fra https://alexwohlbruck.github.io/cat-facts/ og vis den frem på nettsiden.
+- Hent en daglig kattefakta fra [https://alexwohlbruck.github.io/cat-facts/](https://github.com/wh-iterabb-it/meowfacts) og vis den frem på nettsiden.
 
-Komponent B: Kattebilder
-- Hent et bilde av en katt fra 'https://cataas.com/' og vise det frem på nettsiden.
-- Legg til en knapp som henter en ny tilfeldig katt ved nytt tastetrykk.
-
-Hvis tid: legg til try-catch hvor man henter kattebilder som passer feilmeldingen.**
+Komponent B: Fakta counter
+- Legg til en funksjon som teller hvor mange katter som har blitt hentet.
 
 ## Oppgave 2: Finance bro nettside🪙
 Kari Vilikke har blitt hektet på crypto og valutakurser. Hun trenger en nettside som lar henne regne om fra norske kroner til dollar.
