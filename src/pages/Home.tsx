@@ -23,14 +23,12 @@ export default function Home() {
                     <p>Lag en nettside som passer en skikkelig katteentusiast. Denne nettsiden skal inneholde to hovedkomponenter:</p>
                     <h3>Komponent A: Daglige fakta om katter</h3>
                     <ul>
-                        <li>Hent en daglig kattefakta fra <Link to="https://alexwohlbruck.github.io/cat-facts/">https://alexwohlbruck.github.io/cat-facts/</Link> og vis den frem på nettsiden.</li>
+                        <li>Hent en daglig kattefakta fra <Link to="https://github.com/wh-iterabb-it/meowfacts">https://github.com/wh-iterabb-it/meowfacts</Link> og vis den frem på nettsiden.</li>
                     </ul>
-                    <h3>Komponent B: Kattebilder</h3>
+                    <h3>Komponent B: Counter</h3>
                     <ul>
-                        <li>Hent et bilde av en katt fra <Link to="https://cataas.com/">'https://cataas.com/'</Link> og vise det frem på nettsiden.</li>
-                        <li>Legg til en knapp som henter en ny tilfeldig katt ved nytt tastetrykk.</li>
+                        <li>Lag en counter over hvor mange fakta man har hentet.</li>
                     </ul>
-                    <p>Hvis tid: legg til try-catch hvor man henter kattebilder som passer feilmeldingen.**</p>
                 </div>
                 <div className="oppgave">
                     <h2><Link to="">Oppgave 2: Finance bro nettside 🪙</Link></h2>
