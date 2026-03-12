@@ -1,11 +1,7 @@
 import React from "react";
 import {useState, useEffect} from "react";
 
-import "./ComponentsExamples.css"
-
 export default function ListExample() {
-
-    
 
     const [groceryList, setGroceryList] = useState<string[]>([]);
 
